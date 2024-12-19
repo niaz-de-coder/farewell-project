@@ -1,0 +1,72 @@
+/* General */
+/* ❌Do not touch anything from general❌ */
+/* For WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000; /* Scrollbar thumb color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #5e17eb; /* Scrollbar track color */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin; /* Scrollbar width */
+    scrollbar-color: #5e17eb #000000; /* Scrollbar thumb and track colors */
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+.bg-grad-col{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(53,51,205,1) 100%);
+}
+.full-size{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.button-bg{
+    background-color: black;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+.button{
+    text-decoration: none;
+    color: #5e17eb;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 8px;
+    padding: 0;
+    gap: 0;
+}
+.button-icon{
+    text-decoration: none;
+    color: #5e17eb;
+    font-weight: bold;
+    font-size: 34px;
+    margin-right: 16px;
+    padding: 0;
+    gap: 0;
+}
+.button-bg:hover .button-icon{
+    margin-left: 150px;
+    transition: all 0.7s;
+}
+.button-bg:hover .button{
+    opacity: 0;
+}
+
+/* Custom CSS (Write codes from here) */
