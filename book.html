@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency | Booking</title>
+    <link rel="stylesheet" href="css/book.css">
+</head>
+<body>
+    <!-- Form Section -->
+    <main id="formin">
+        <form id="bookingForm">
+            <h2>Booking Form</h2>
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone Number (BD)" required>
+            <select id="location" required>
+                <option value="">Select Location</option>
+                <option value="Cox's Bazar">Cox's Bazar - Bangladesh</option>
+                <option value="Delhi">Delhi - India</option>
+                <option value="Darjeeling">Darjeeling - India</option>
+                <option value="Kashmir">Kashmir - India</option>
+                <option value="London">London - UK</option>
+                <option value="Paris">Paris - France</option>
+            </select>
+            <input type="number" id="persons" placeholder="Number of Persons" min="1" required>
+            <select id="transport" required>
+                <option value="">Select Transport</option>
+                <option value="Plane">Plane</option>
+                <option value="Bus">Bus</option>
+                <option value="Rail">Rail</option>
+            </select>
+            <select id="hotel" required>
+                <option value="">Select Hotel</option>
+                <option value="1star">1 Star</option>
+                <option value="2star">2 Star</option>
+                <option value="3star">3 Star</option>
+                <option value="4star">4 Star</option>
+                <option value="5star">5 Star</option>
+            </select>
+            <select id="package" required>
+                <option value="">Select Package</option>
+                <option value="family">Family</option>
+                <option value="friends">Friends</option>
+                <option value="couple">Couple</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <!-- Bill Section -->
+    <main id="formout">
+        <h2>Invoice</h2>
+        <div id="billDetails"></div>
+        <button id="downloadBtn" disabled>Download</button>
+        <button id="printBtn" disabled>Print</button>
+    </main>
+
+    <script src="js/book.js"></script>
+</body>
+</html>

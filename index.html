@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="shortcut icon" href="assets/fav.png" type="image/x-icon">
@@ -25,32 +26,32 @@
         <div class="res-nav-list-box">
             <div class="nav-list-box">
               <div class="nav-list">
-                <a class="nav-btn" href="">HOME</a>
-                <a class="nav-btn" href="">DESTINATIONS</a>
-                <a class="nav-btn" href="">GALLERY</a>
-                <a class="nav-btn" href="">PACKAGES</a>
-                <a class="nav-btn" href="">BOOKING</a>
-                <a class="nav-btn" href="">TESTIMONIAL</a>
-                <a class="nav-btn" href="">ABOUT</a>
-                <a class="nav-btn" href="">CONTACT</a>
-                <a class="nav-btn" href="">FAQ</a>
+                <a class="nav-btn" href="#home">HOME</a>
+                <a class="nav-btn" href="#destination">DESTINATIONS</a>
+                <a class="nav-btn" href="#gallery">GALLERY</a>
+                <a class="nav-btn" href="#packages">PACKAGES</a>
+                <a class="nav-btn" href="#book">BOOKING</a>
+                <a class="nav-btn" href="#testimonial">TESTIMONIAL</a>
+                <a class="nav-btn" href="#about">ABOUT</a>
+                <a class="nav-btn" href="#contact">CONTACT</a>
+                <a class="nav-btn" href="#faq">FAQ</a>
               </div>
             </div>
         </div>
       </main>   
       <!-- Header -->
-       <main class="full-size header-box">
+       <main id="head" class="full-size header-box">
         <div class="content-header">
           <h1 class="header-title">Travel Agency</h1>
           <p class="header-info">EXPLORE THE WORLD</p>
-            <div class="button-bg">
+            <div id="book-page" class="button-bg">
           <i class="fa-solid fa-circle-arrow-right button-icon"></i>
           <a style="text-decoration: none;" href=""><p class="button">BOOKING</p></a>
             </div>
         </div>
        </main>
        <!-- Destinations -->
-        <main class="full-size dest-box">
+        <main id="destination" class="full-size dest-box">
           <div class="full-size test-title  dest-title">
             <i style="color: #5e17eb;" class="fa-solid fa-location-dot"></i>
             <h1 style="color: #5e17eb;">Destinations</h1>
@@ -107,8 +108,81 @@
                 </div>
           </div>
         </main>
+        <!-- Gallery -->
+         <main id="gallery" class="full-size bg-grad-col gallery-box">
+          <div class="full-size test-title  gallery-title">
+            <i class="fa-solid fa-image"></i>
+            <h1>Gallery</h1>
+          </div>
+          <div class="full-size gallery-content">
+            <img src="assets/gallery/gallery.png" alt="">
+          </div>
+          <div class="full-size dest-btn">
+            <div class="button-bg">
+              <i class="fa-solid fa-circle-arrow-right button-icon"></i>
+              <a style="text-decoration: none;" href=""><p class="button">SEE MORE</p></a>
+                </div>
+          </div>
+         </main>
+         <!-- Packages -->
+          <main id="packages" class="full-size pack-box">
+            <div class="full-size test-title  dest-title">
+              <i style="color: #5e17eb;" class="fa-solid fa-location-dot"></i>
+              <h1 style="color: #5e17eb;">Packages</h1>
+            </div>
+            <div class="full-size pack-content">
+              <div class="pc-1 bg-grad-col">
+                <img src="https://d1fegwn2wjh0cs.cloudfront.net/04-13-2023/t_7fd05ee79f17487e9336e1df86e0af90_name_7d1c824dcb934d64917642bcb9d38a77.jpeg" alt="">
+                <h3>Family Package</h3>
+                <img src="assets/30dis.png" alt="">
+                <div id="book-page" class="button-bg pc-btn">
+                  <i class="fa-solid fa-circle-arrow-right button-icon"></i>
+                  <a style="text-decoration: none;" href=""><p class="button">BOOKING</p></a>
+                    </div>
+              </div>
+              <div class="pc-1 bg-grad-col">
+                <img src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                <h3>Friends Package</h3>
+                <img src="assets/40dis.png" alt="">
+                <div id="book-page" class="button-bg pc-btn">
+                  <i class="fa-solid fa-circle-arrow-right button-icon"></i>
+                  <a style="text-decoration: none;" href=""><p class="button">BOOKING</p></a>
+                    </div>
+              </div>
+              <div class="pc-1 bg-grad-col">
+                <img src="https://t3.ftcdn.net/jpg/06/30/32/74/360_F_630327455_w57niWJB9yFJepOXC7o4FjGmSboJSptC.jpg" alt="">
+                <h3>Couple Package</h3>
+                <img src="assets/50dis.png" alt="">
+                <div id="book-page" class="button-bg pc-btn pc-btn-3">
+                  <i class="fa-solid fa-circle-arrow-right button-icon"></i>
+                  <a style="text-decoration: none;" href=""><p class="button">BOOKING</p></a>
+                    </div>
+              </div>
+            </div>
+            <div class="full-size pack-btn">
+              <div class="button-bg">
+                <i class="fa-solid fa-circle-arrow-right button-icon"></i>
+                <a style="text-decoration: none;" href=""><p class="button">SEE MORE</p></a>
+                  </div>
+            </div>
+          </div>
+          </main>
+          <!-- BOOK -->
+           <main id="book" class="full-size book-box">
+            <div class="full-size book-content">
+              <h1>Experience Your Best Travel</h1>
+              <h3>Fly | Road | Rail</h3>
+              <h6>Stay | Eat | Enjoy</h6>
+              <div class="full-size book-btn">
+                <div id="book-page" class="button-bg">
+                  <i class="fa-solid fa-circle-arrow-right button-icon"></i>
+                  <a style="text-decoration: none;"><p class="button">BOOKING</p></a>
+                    </div>
+              </div>
+            </div>
+           </main>
        <!-- Testimonial -->
-        <main class="full-size test-box bg-grad-col">
+        <main id="testimonial" class="full-size test-box bg-grad-col">
           <div class="full-size test-title">
             <i class="fa-solid fa-user"></i>
             <h1>Testimonials</h1>
@@ -137,6 +211,63 @@
                 </div>
           </div>
         </main>
+        <!-- Contact -->
+        <main class="full-size" id="contact">
+          <section class="contact-section">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Please fill out the form below:</p>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+            <p id="responseMessage"></p>
+          </section>
+        </main>
+        <!-- About -->
+         <main class="full-size bg-grad-col" id="about">
+              <div class="about-section">
+                <div class="full-size center about-title">
+                  <i class="fa-solid fa-address-card"></i>
+                  <h1>About Us</h1>
+                </div>
+            
+            <div class="content-container">
+                <div class="section">
+                    
+                    <h2>Agency Overview</h2>
+                    <img src="assets/fav.png" alt="Globe Icon">
+                    <p>Welcome to Travel Agency, established in 2024 with a passion for creating unforgettable journeys. Based in Dhaka, Bangladesh, we specialize in crafting personalized travel experiences for explorers, adventurers, and leisure seekers alike. Our mission is to make travel seamless and enriching, whether you’re planning a domestic getaway or an international adventure.</p>
+                </div>
+                <div class="section ceo-section">
+                    <h2>Message from CEO</h2>
+                    <div class="ceo-image">
+                        <img src="assets/ceo.png" alt="CEO">
+                    </div>
+                    <p style="text-align: center; font-weight: bold;">John Vector, CEO</p>
+                    <p>It is with great excitement and gratitude that I welcome you to Travel Agency, established in 2024 to transform the way you explore the world. At Travel Agency, we are committed to providing exceptional service, crafting personalized experiences, and ensuring your adventures are as unique as your dreams.</p>
+                  
+                </div>
+            </div>
+            <div class="full-size center">
+              <div class="button-bg">
+                <i class="fa-solid fa-circle-arrow-right button-icon"></i>
+                <a style="text-decoration: none;" href=""><p class="button">SEE MORE</p></a>
+                  </div>
+            </div>
+            </div>
+         </main>
+         
     <!-- JavaScript -->
      <script src="js/script.js"></script>
 </body>

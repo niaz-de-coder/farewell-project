@@ -1,57 +1,56 @@
-// Testimonial Section
 document.addEventListener("DOMContentLoaded", () => {
-    const testimonials = [
-        {
-            img: "assets/testimonial/1.png",
-            name: "Jordana",
-            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam consequatur earum suscipit rerum nesciunt, tenetur, vitae distinctio temporibus veniam iste eius quis neque pariatur vel dolorem laboriosam, delectus sint."
-        },
-        {
-            img: "assets/testimonial/2.png",
-            name: "John",
-            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam consequatur earum suscipit rerum nesciunt, tenetur, vitae distinctio temporibus veniam iste eius quis neque pariatur vel dolorem laboriosam, delectus sint."
-        },
-        {
-            img: "assets/testimonial/3.png",
-            name: "Nikhil",
-            info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam consequatur earum suscipit rerum nesciunt, tenetur, vitae distinctio temporibus veniam iste eius quis neque pariatur vel dolorem laboriosam, delectus sint."
-        }
-    ];
+  const testimonials = [
+      {
+          img: "assets/testimonial/1.png",
+          name: "Jordana",
+          info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam consequatur earum suscipit rerum nesciunt, tenetur, vitae distinctio temporibus veniam iste eius quis neque pariatur vel dolorem laboriosam, delectus sint."
+      },
+      {
+          img: "assets/testimonial/2.png",
+          name: "John",
+          info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam consequatur earum suscipit rerum nesciunt, tenetur, vitae distinctio temporibus veniam iste eius quis neque pariatur vel dolorem laboriosam, delectus sint."
+      },
+      {
+          img: "assets/testimonial/3.png",
+          name: "Nikhil",
+          info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil totam consequatur earum suscipit rerum nesciunt, tenetur, vitae distinctio temporibus veniam iste eius quis neque pariatur vel dolorem laboriosam, delectus sint."
+      }
+  ];
 
-    const boxes = [
-        document.getElementById("test-1"),
-        document.getElementById("test-2"),
-        document.getElementById("test-3")
-    ];
+  const boxes = [
+      document.getElementById("test-1"),
+      document.getElementById("test-2"),
+      document.getElementById("test-3")
+  ];
 
-    let currentIndex = 0;
+  let currentIndex = 0;
 
-    function updateTestimonials() {
-        // Rotate the testimonial data
-        const rotatedTestimonials = testimonials.slice(currentIndex).concat(testimonials.slice(0, currentIndex));
+  function updateTestimonials() {
+      // Rotate the testimonial data
+      const rotatedTestimonials = testimonials.slice(currentIndex).concat(testimonials.slice(0, currentIndex));
 
-        // Update each box's content and opacity
-        boxes.forEach((box, index) => {
-            const imgElement = box.querySelector("img");
-            const nameElement = box.querySelector("h3");
-            const infoElement = box.querySelector("p");
+      // Update each box's content and opacity
+      boxes.forEach((box, index) => {
+          const imgElement = box.querySelector("img");
+          const nameElement = box.querySelector("h3");
+          const infoElement = box.querySelector("p");
 
-            imgElement.src = rotatedTestimonials[index].img;
-            nameElement.textContent = rotatedTestimonials[index].name;
-            infoElement.textContent = rotatedTestimonials[index].info;
+          imgElement.src = rotatedTestimonials[index].img;
+          nameElement.textContent = rotatedTestimonials[index].name;
+          infoElement.textContent = rotatedTestimonials[index].info;
 
-            box.style.opacity = index === 1 ? "100%" : "50%"; // Middle div gets full opacity
-        });
+          box.style.opacity = index === 1 ? "100%" : "50%"; // Middle div gets full opacity
+      });
 
-        // Update the current index
-        currentIndex = (currentIndex + 1) % testimonials.length;
-    }
+      // Update the current index
+      currentIndex = (currentIndex + 1) % testimonials.length;
+  }
 
-    // Initialize the testimonials
-    updateTestimonials();
+  // Initialize the testimonials
+  updateTestimonials();
 
-    // Set the interval to switch testimonials every 3 seconds
-    setInterval(updateTestimonials, 3000);
+  // Set the interval to switch testimonials every 3 seconds
+  setInterval(updateTestimonials, 3000);
 });
 
 
@@ -89,3 +88,31 @@ setInterval(() => {
   coxRotation += 1;
   rotateImage(coxImg, coxRotation);
 }, 30);
+
+// Select the element with the ID "book-page"
+const bookPageElement = document.getElementById('book-page');
+
+// Add a click event listener to the element
+bookPageElement.addEventListener('click', () => {
+    // Navigate to book.html
+    window.location.href = 'book.html';
+});
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  
+  const responseMessage = document.getElementById('responseMessage');
+  
+  if (name && email && message) {
+    responseMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
+    responseMessage.style.color = 'green';
+    this.reset(); // Reset the form
+  } else {
+    responseMessage.textContent = 'Please fill out all fields.';
+    responseMessage.style.color = 'red';
+  }
+});
+
