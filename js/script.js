@@ -89,14 +89,17 @@ setInterval(() => {
   rotateImage(coxImg, coxRotation);
 }, 30);
 
-// Select the element with the ID "book-page"
-const bookPageElement = document.getElementById('book-page');
+// Select all elements with the class "book-page"
+const bookPageElements = document.querySelectorAll('.id-book-page');
 
-// Add a click event listener to the element
-bookPageElement.addEventListener('click', () => {
-    // Navigate to book.html
-    window.location.href = 'book.html';
+// Add a click event listener to each element
+bookPageElements.forEach(bookPageElement => {
+    bookPageElement.addEventListener('click', () => {
+        // Navigate to book.html
+        window.location.href = 'book.html';
+    });
 });
+
 document.getElementById('contactForm').addEventListener('submit', function(event) {
   event.preventDefault();
   
