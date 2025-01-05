@@ -3,19 +3,23 @@
 /* For WebKit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
     width: 8px; /* Scrollbar width */
+    scroll-behavior:smooth;
 }
 
 ::-webkit-scrollbar-thumb {
+    scroll-behavior:smooth;
     background-color: #000000; /* Scrollbar thumb color */
     border-radius: 10px; /* Rounded corners */
 }
 
 ::-webkit-scrollbar-track {
+    scroll-behavior:smooth;
     background-color: #5e17eb; /* Scrollbar track color */
 }
 
 /* For Firefox */
 html {
+    scroll-behavior:smooth;
     scrollbar-width: thin; /* Scrollbar width */
     scrollbar-color: #5e17eb #000000; /* Scrollbar thumb and track colors */
 }
@@ -24,6 +28,7 @@ body{
     width: 100%;
     margin: 0;
     overflow-x: hidden;
+    scroll-behavior:smooth;
 }
 .bg-grad-col{
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(53,51,205,1) 100%);
@@ -1260,3 +1265,58 @@ body{
       padding: 15px;
     }
   }
+
+/* Footer Section */
+.footer-sec{
+    display: flex;
+    flex-direction: row;
+}
+.foot-img-sec img{
+    width: 200px;
+}
+.foot-btn-sec div a{
+    color: #5e17eb;
+}
+.foot-img-sec{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foot-info-sec{
+    width: 50%;
+}
+.foot-info-sec div h1{
+    color: #5e17eb;
+}
+.foot-btn-sec{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media (max-width: 690px) {
+    .foot-img-sec img{
+        width: 100px;
+    }
+}
+@media (max-width:370px) {
+    .foot-info-sec div h1{
+        color: #5e17eb;
+        font-size: 10px;
+    }
+    .foot-info-sec div p{
+        font-size: 5px;
+    }
+    .foot-info-sec{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .foot-btn-sec div a{
+        color: #5e17eb;
+        font-size: 5px;
+    }
+}
