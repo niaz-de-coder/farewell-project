@@ -554,6 +554,9 @@ body{
     }
 }
 /* Destinations Box */
+.dest-box{
+    margin-bottom: 100px;
+}
 .det-box{
     display: flex;
     flex-direction: column;
@@ -837,6 +840,7 @@ body{
 .pack-box{
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
 }
 .pack-content{
     display: flex;
